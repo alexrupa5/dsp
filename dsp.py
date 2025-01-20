@@ -76,7 +76,9 @@ sma50 = float(data['SMA50'].iloc[-1])
 sma200 = float(data['SMA200'].iloc[-1])
 rsi = float(data['RSI'].iloc[-1])
 
-st.write(f"SMA50 is {sma50} and also {data['SMA50']} and btw {data['SMA50'].iloc[-1]}")
+
+#just a test
+#st.write(f"SMA50 is {sma50} and also {data['SMA50']} and btw {data['SMA50'].iloc[-1]}")
 
 
 

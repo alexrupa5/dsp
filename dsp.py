@@ -69,7 +69,9 @@ st.metric("Volatility", f"{round(data['Volatility'].iloc[-1] * 100, 2)}%")
 st.metric("RSI", round(data['RSI'].iloc[-1], 2))
 
 # Analysis logic
-st.subheader("Analysis and Recommendation")
+
+#next time more in-depth analysis
+#st.subheader("Analysis and Recommendation")
 
 current_price = float(data['Close'].iloc[-1])
 sma50 = float(data['SMA50'].iloc[-1])
@@ -94,9 +96,9 @@ elif rsi < 30:
 else:
     recommendation = "Hold"
 
-st.write(f"**Recommendation**: {recommendation}")
+st.subheader(f"**Recommendation**: {recommendation}")
 
-# Risk vs Return Estimation
+# some ideas on risk
 avg_daily_return = data['Daily Return'].mean()
 daily_volatility = data['Volatility'].mean()
 annual_return = avg_daily_return * 252

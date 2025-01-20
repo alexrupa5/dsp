@@ -100,5 +100,6 @@ st.write(f"**Expected Annual Return**: {round(annual_return * 100, 2)}%")
 st.write(f"**Expected Annual Volatility (Risk)**: {round(annual_volatility * 100, 2)}%")
 
 # Footer
-st.write("Disclaimer: This is a simplified analysis and not financial advice.")
+st.write("Good luck! And may the odds be ever in your favor.")
+
 

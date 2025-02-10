@@ -73,3 +73,8 @@ st.pyplot(fig)
 
 # Footer
 st.write("Good luck! And may the odds be ever in your favor.")
+
+# to add
+# sentiment analysis
+# random forrest + UI for parametere tuning
+# comparing multiple stocks

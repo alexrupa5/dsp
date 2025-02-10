@@ -9,7 +9,7 @@ import get_indicators as gi
 
 
 # Streamlit app title
-st.title("Stock Trading Guide")
+st.title("Stock Trading Companion")
 
 # Sidebar input
 st.sidebar.header("Input Stock Information")

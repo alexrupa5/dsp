@@ -3,5 +3,5 @@ matplotlib
 streamlit
 numpy
 pandas
-indicators
+get_indicators
 seaborn

@@ -52,7 +52,7 @@ for indicator in indicators:
         data['SMA200'] = gi.SMA200(data)
     elif indicator == "Daily Returns":
         ax2 = ax.twinx()
-        ax2.set_ylabel("Daily Returns in %")
+        ax2.set_ylabel("Percentages")
         ax2.set_ylim(0, 1)
         #data['Daily Returns'] = gi.daily_returns(data)
         ax2.plot(gi.daily_returns(data), label='Daily Returns', alpha=0.8, linestyle="-", color = 'red')
@@ -61,14 +61,21 @@ for indicator in indicators:
         ax.plot(gi.RSI(data), label='RSI', alpha=0.8, linestyle="--")
         data['RSI'] = gi.RSI(data)
     elif indicator == "Volatility":
-        ax.plot(gi.volatility(data), label='Volatility', alpha=0.8, linestyle="--")
+        ax2 = ax.twinx()
+        ax2.set_ylim(0, 1)
+        ax2.set_ylabel("Percentages")
+        ax2.plot(gi.volatility(data), label='Volatility', alpha=0.8, linestyle="-", color = 'green')
         data['Volatility'] = gi.volatility(data)
 #ax.plot(data[indicator], label=indicator, alpha = 0.8, linestyle="--")
 ax.set_title(f"{stock_ticker} Indicators Overview")
 ax.set_xlabel("Date")
 ax.set_ylabel("Price")
 plt.xticks(rotation=45, ha='right')
-ax.legend()
+try:
+    ax2.legend(loc = 'upper right')
+except:
+    pass
+ax.legend(loc = 'upper left')
 st.pyplot(fig)
 
 # Footer

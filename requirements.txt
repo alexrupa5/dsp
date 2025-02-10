@@ -1,3 +1,7 @@
 yfinance
 matplotlib
 streamlit
+numpy
+pandas
+indicators
+seaborn
